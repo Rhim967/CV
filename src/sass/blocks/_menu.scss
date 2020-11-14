@@ -1,0 +1,128 @@
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    cursor: pointer;
+    span{
+        display: block;
+        height: 3px;
+        width: 33px;
+        background: white;
+    }
+    span.long{
+        width: 40px;
+    }
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s;
+    display: flex;
+    justify-content: flex-end;
+    &.active{
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__overlay{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        opacity: .75;
+        z-index: 10;
+    }
+    &__block{
+        //left: -100%;
+        left: 0; 
+        position: relative;
+        background: $main_color;
+        width: 30%;
+        height: 100%;
+        transition: all .6s;
+        padding-top: 140px;
+        padding-left: 50px;
+        z-index: 10;
+    }
+    &__close{
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    &__list{
+        position: relative;
+        list-style-type: none;
+        padding-left: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 285px;
+    }
+    &__link{
+        position: relative;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: left;
+        text-transform: uppercase;
+        &::before{
+            display: block;
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 100%;
+            top: 8px;
+            left: -40px;
+        }
+        &:hover{
+            &:before{
+                background-color: #fff;
+            }
+        }
+        a{
+            display: inline-block;
+            color: white;
+            width: 100%;
+        }
+    }
+    &__social{
+        display: flex;
+        position: absolute;
+        width: 90px;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        a{
+            &:hover{
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    transition: all .7s;
+                }
+                path{
+                    width: 30px;
+                    height: 30px;
+                    fill: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@mixin before_cirecle{
+    &:before{
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: $main_color;
+        border-radius: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 8px;
+        left: -11px;
+
+    }
+}
+@mixin before_line{
+    &:before{
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 4px;
+        background: $main_color;
+        top: 60px;
+        left: 10px;
+
+    }
+}
+@mixin icon_before_cirecle{
+    &:before{
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: $main_color;
+        border-radius: 100%;
+        position: absolute;
+        z-index: -1;
+        top: -15px;
+        left: -12px;
+
+    }
+}
