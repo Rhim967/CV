@@ -1,0 +1,80 @@
+.using{
+    margin-top: 135px;
+    &__subtitle{
+        font-size: 12px;
+        @include before_center_cirecle;
+        &:before{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        text-align: center;
+    }
+    &__title{
+        text-align: center;
+        @include before_line;
+        &:before{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__wrapper{
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 4fr);
+        gap: 13px 13px;
+        place-content: center center;
+    }
+    &__item{
+        border: 1px solid black;
+        padding: 30px 30px;
+        #jq{
+            margin-top: 45px;
+        }
+        &-title{
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        &-body{
+            margin-top: 15px;
+            text-align: justify;
+            font-size: 12px;
+        }
+    }
+    &__progress{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &__loader{
+        max-width: 350px;
+        margin: 60px 5px 0 5px;
+        &__header{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            @include before_cirecle;
+            &:before{
+                position: absolute;
+                top: -5px;
+                left: -1px;
+            }
+            &-title{
+                padding-left: 10px;
+            } 
+        }
+        &-line{
+            margin-top: 20px;
+            max-width: 350px;
+            height: 15px;
+            display: flex;
+            background: white;
+            border-radius: 5px;
+        }
+        &-linefull{
+            max-width: 350px;
+            height: 15px;
+            border-radius: 5px;
+            background: $main-color;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.resume{
+    padding-top: 125px;
+    &__subtitle{
+        text-align: center;
+        @include before_cirecle;
+        &:before{
+            top: 16%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
+    &__title{
+        text-align: center;
+        @include before_line;
+        &:before{
+            left: 48%;
+            transform: translateY(-50%);
+        }
+    }
+    &__wrapper{
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        //grid-auto-flow: row;
+        column-gap: 135px;
+    }
+    &__column{
+        &-title{
+            position: relative;
+            font-weight: bold;
+            padding-left: 35px;
+            &:before{
+                position: absolute;
+                content: '';
+                background: $main_color;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                top: 50%;
+                left: -7px;
+                transform: translateY(-50%);
+            }
+        }
+        ul{
+            list-style-type: none;
+            position: relative;
+            &:after{
+                content: '';
+                width: 2px;
+                height: calc(100% + 16px);
+                position: absolute;
+                background: black;
+                top: -5px;
+                left: 0;
+    
+            }
+        }
+    }
+    &__item{
+        position: relative;
+        &:before{
+            content: '';
+            background: black;
+            height: 2px;
+            position: absolute;
+            width: 75px;
+            top: 85px;
+
+        }
+        &-head{
+            position: relative;
+            padding: 45px 0 0 130px;
+        }
+        &-body{
+            padding-left: 75px;
+            margin-top: 12px;
+            font-size: 14px;
+            text-align: justify;
+        }
+        &-icon{
+            position: absolute;
+            top: 80px;
+            left: 85px;
+            @include before_cirecle;
+            &:before{
+                top: -14px;
+            }
+            img{
+                position: absolute;
+                left: 6px;
+            }
+        }
+        &-location{
+            font-size: 12px;
+        }
+    }
+}

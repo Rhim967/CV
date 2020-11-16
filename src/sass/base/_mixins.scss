@@ -13,6 +13,21 @@
 
     }
 }
+@mixin before_center_cirecle{
+    &:before{
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: $main_color;
+        border-radius: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 8px;
+        left: 21px;
+
+    }
+}
 @mixin before_line{
     &:before{
         content: '';
