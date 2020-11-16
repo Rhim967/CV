@@ -111,6 +111,10 @@
         left: 50%;
         transform: translateX(-50%);
         a{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-right: 10px;
             &:hover{
                 svg {
                     width: 30px;
