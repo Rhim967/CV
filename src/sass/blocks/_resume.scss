@@ -1,5 +1,5 @@
 .resume{
-    padding-top: 125px;
+    padding-top: 50px;
     &__subtitle{
         text-align: center;
         @include before_cirecle;
@@ -25,6 +25,7 @@
         grid-template-columns: repeat(2, 425px);
         //grid-auto-flow: row;
         column-gap: 135px;
+        justify-content: center;
     }
     &__column{
         &-title{
